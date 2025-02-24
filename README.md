@@ -119,7 +119,7 @@ SELECT aws_s3.table_import_from_s3(
 * Example:
 ```
 # Start postgres in docker
-docker run --rm --name postgres-container -e POSTGRES_PASSWORD=dev -p 5432:5432 -d postgres
+docker run --rm --name mycompany-db -e POSTGRES_PASSWORD=dev -p 5432:5432 -d postgres
 
 # Create mydb
 PGPASSWORD=dev psql -h localhost -p 5432 -U postgres -d postgres -c "create database mydb"
