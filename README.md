@@ -126,12 +126,6 @@ PGPASSWORD=dev psql -h localhost -p 5432 -U postgres -d postgres -c "create data
 
 # Run migration
 ENV=dev \
-HOST=host.docker.internal \
-PORT=5432 \
-DB=mydb \
-SCHEMA=public \
-USER=postgres \
-PASS=dev \
 ./migrate.sh
 ```
 
@@ -141,11 +135,10 @@ PASS=dev \
 ```
 # Run migration
 ENV=dev \
-HOST=host.docker.internal \
-PORT=5432 \
-DB=mydb \
-SCHEMA=public \
-USER=postgres \
-PASS=dev \
 ./repair.sh
+```
+
+## Connect to local
+```
+PGPASSWORD=dev psql -h localhost -p 5432 -U postgres -d mydb
 ```
