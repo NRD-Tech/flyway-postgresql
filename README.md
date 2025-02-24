@@ -125,14 +125,14 @@ docker run --rm --name mycompany-db -e POSTGRES_PASSWORD=dev -p 5432:5432 -d pos
 PGPASSWORD=dev psql -h localhost -p 5432 -U postgres -d postgres -c "create database mydb"
 
 # Run migration
-ENV=dev ./migrate.sh
+ENVIRONMENT=dev ./migrate.sh
 ```
 
 ## Running Repair for Developer-Specific Databases
 * Occassionally a migration will fail to execute and will require flyway to run a repair to clean up the migration meta data.
 ```
 # Run migration
-ENV=dev ./repair.sh
+ENVIRONMENT=dev ./repair.sh
 ```
 
 ## Connect to local
